@@ -7,7 +7,7 @@ import java.sql.Time;
 
 
 public class Planners {
-
+                                //Declaring the attributes 
     private String eventType;
     private Date eventDate;
     private Time eventTime;
@@ -17,7 +17,7 @@ public class Planners {
     private String menu;
     private String decor;
     private String bookingNum;
-
+                                                //Setting the constructor
     public Planners(String eventType, Date eventDate, Time eventTime, String address, int people, int amountOfPeople,
             String menu, String decor) {
         this.setEventType(eventType);
@@ -30,7 +30,7 @@ public class Planners {
         this.setDecor(decor);
         this.setBooking(bookungNum);
     }
-
+                                        // Setting the get set methods for the attributes
     public Date getEventDate() {
         return eventDate;
     }
@@ -91,16 +91,23 @@ public class Planners {
         return eventType;
     }
     
-   //booking number event
 
     public void setEventType(String eventType) {
         this.eventType = eventType;
+    }
+    
+    public String getBookingNum(){
+     return bookingNum;   
+    }
+    
+    public void setBookingNum(String bookingNum){
+        this.bookingNum = bookingNum;
     }
 
     public Planners(){
 
     }
-
+                                // Reading lists and checking them
     public List<Planners> allData() throws FileNotFoundException{
 
         menu menuData = new menu();
