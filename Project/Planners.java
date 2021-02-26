@@ -16,6 +16,7 @@ public class Planners {
     private int amountOfPeople;
     private String menu;
     private String decor;
+    private String bookingNum;
 
     public Planners(String eventType, Date eventDate, Time eventTime, String address, int people, int amountOfPeople,
             String menu, String decor) {
@@ -27,6 +28,7 @@ public class Planners {
         this.setAmountOfPeople(amountOfPeople);
         this.setMenu(menu);
         this.setDecor(decor);
+        this.setBooking(bookungNum);
     }
 
     public Date getEventDate() {
@@ -88,6 +90,8 @@ public class Planners {
     public String getEventType() {
         return eventType;
     }
+    
+   //booking number event
 
     public void setEventType(String eventType) {
         this.eventType = eventType;
