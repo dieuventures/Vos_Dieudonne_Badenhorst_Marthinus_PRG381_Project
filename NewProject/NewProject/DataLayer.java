@@ -110,7 +110,7 @@ public DataLayer(){
 
 
 
-public List<DataLayer> GetClientData() throws FileNotFoundException {    // List where i read and write the data from the user 
+public List<DataLayer> GetClientData() throws FileNotFoundException {    // List where data from user is read and written
 
     List<DataLayer> datalist = new ArrayList<DataLayer>();
 
