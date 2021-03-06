@@ -92,7 +92,7 @@ public class DataLayer {
     }
 
     public DataLayer(String eventType, String cStarters, String cMain, String cDessert, String eventThemes,
-            String eventAddress, String dateTime, int numOfPeople) {
+            String eventAddress, String dateTime, int numOfPeople) {            // Contruster to initialize the variables 
         this.eventType = eventType;
         this.cStarters = cStarters;
         this.cMain = cMain;
@@ -110,7 +110,7 @@ public DataLayer(){
 
 
 
-public List<DataLayer> GetClientData() throws FileNotFoundException {
+public List<DataLayer> GetClientData() throws FileNotFoundException {    // List where i read and write the data from the user 
 
     List<DataLayer> datalist = new ArrayList<DataLayer>();
 
@@ -123,7 +123,7 @@ public List<DataLayer> GetClientData() throws FileNotFoundException {
        datalist.add(new DataLayer(line[0] , line[1] , line[2] , line[3] , line[4] , line[5]  , line[6] , Integer.parseInt(line[7])));
    }
    try {
-    FileWriter writer = new FileWriter("ClientData");
+    FileWriter writer = new FileWriter("ClientData");      // File writer where i take the data from the list and read it to the text file 
     Writer output = new BufferedWriter(writer);
 
     int sz = datalist.size();
@@ -132,7 +132,7 @@ public List<DataLayer> GetClientData() throws FileNotFoundException {
     }
     output.close();
    } catch (Exception e) {
-       JOptionPane.showMessageDialog(null , "i cannot see the file");
+       JOptionPane.showMessageDialog(null , "i cannot see the file");   // throwing an exception if there is no file 
    }
 
   String fileName = "ClientData";
@@ -140,7 +140,7 @@ public List<DataLayer> GetClientData() throws FileNotFoundException {
   ArrayList alist = new ArrayList<>();
 
   try {
-      BufferedReader input = new BufferedReader(new FileReader(fileName));
+      BufferedReader input = new BufferedReader(new FileReader(fileName));     // reading the data from the text file that was stored into the program and displaying it for the user 
       if (!input.ready()) {
           throw new IOException();
       }
@@ -149,18 +149,18 @@ public List<DataLayer> GetClientData() throws FileNotFoundException {
           alist.add(line);
       }
       input.close();
-  } catch (Exception e) {
+  } catch (Exception e) {     // exception handling 
       System.out.println(e);
   }
 
    int sz = alist.size();
    for (int i = 0; i < sz; i++) {
-       System.out.println(alist.get(i).toString());
+       System.out.println(alist.get(i).toString());      // displaying the list data for the user 
    }
 
 
 
-    return datalist;
+    return datalist;   // returning the list of data for the user 
 }
 
 public void GetClientData(int cChoices) {
